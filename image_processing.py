@@ -30,12 +30,18 @@ class ImageEditorApp:
         menubar = tk.Menu(self.root)
         self.root.config(menu=menubar)
         
-        file_menu = tk.Menu(menubar, tearoff=0)
-        menubar.add_cascade(label="File", menu=file_menu)
-        file_menu.add_command(label="Open", command=self.load_image)
-        file_menu.add_command(label="Save", command=self.save_image)
-        file_menu.add_separator()
-        file_menu.add_command(label="Exit", command=self.root.quit)
+        # Create a "File" menu in the menu bar
+file_menu = tk.Menu(menubar, tearoff=0)  # Create a dropdown menu under "File" with tear-off disabled
+menubar.add_cascade(label="File", menu=file_menu)  # Add "File" menu to the menu bar
+
+# Add menu options to the "File" menu
+file_menu.add_command(label="Open", command=self.load_image)  # Adds an "Open" option to load an image
+file_menu.add_command(label="Save", command=self.save_image)  # Adds a "Save" option to save an image
+
+file_menu.add_separator()  # Adds a separator line for better menu organization
+
+file_menu.add_command(label="Exit", command=self.root.quit)  # Adds an "Exit" option to close the application
+
         
         # Main Frame
         main_frame = tk.Frame(self.root, bg="#f7f7f7")
@@ -105,3 +111,4 @@ class ImageEditorApp:
 root = tk.Tk()
 app = ImageEditorApp(root)
 root.mainloop()
+
