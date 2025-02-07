@@ -24,10 +24,10 @@
 
 
 **Project Folder Structure**  
-helper/: contains supporting functions and classes
-pages/: Contains the pages for the app
-output/: find the image output here
-widget/: contains the widgets used in app
+helper/: contains supporting functions and classes[]
+pages/: Contains the pages for the app[]
+output/: find the image output here[]
+widget/: contains the widgets used in app[]
 
 main.py: main entry point of the app[]
 
